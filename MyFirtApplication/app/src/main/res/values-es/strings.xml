@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Firt Application</string>
+    <string name="txt_play">Jugar</string>
+    <string name="txt_profile">Perfil</string>
+    <string name="txt_confing">Ajustes</string>
+    <string name="txt_about">Acerca de</string>
+    <string name="txt_exit">Salir</string>
+    <string name="txt_acount">Cuenta</string>
+    <string name="txt_email">CORREO</string>
+    <string name="txt_user">Usuario</string>
+    <string name="txt_password">Clave</string>
+    <string name="txt_Sing_In">Iniciar Sesión</string>
+</resources>

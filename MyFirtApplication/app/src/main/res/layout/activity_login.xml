@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical">
+  
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/misiontic_2022_1"
+        android:layout_weight="50"
+
+        >
+    </ImageView>
+  </LinearLayout>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/txt_user"
+      android:textSize="20dp"
+      android:layout_marginLeft="3dp"
+      android:layout_marginTop="30dp">
+  </TextView>
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/txt_email"
+      android:background="@drawable/borde_redondeado">
+  </EditText>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/txt_password"
+      android:textSize="20dp"
+      android:layout_marginLeft="3dp"
+      android:layout_marginTop="30dp">
+  </TextView>
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="xxxxxxxx"></EditText>
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/txt_Sing_In"
+      android:layout_marginTop="60dp">
+  </Button>
+
+</LinearLayout>
