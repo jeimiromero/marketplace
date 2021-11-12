@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Golotodo</string>
+
+    <string name="txt_welcome">Welcome!</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_register">Register</string>
+    <string name="txt_name">Name</string>
+    <string name="txt_lastname">Lastname</string>
+    <string name="txt_email">Email</string>
+</resources>
