@@ -45,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
+            android:background="@drawable/stilobuton"
             >
         </EditText>
 
@@ -64,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
+            android:background="@drawable/stilobuton"
             >
         </EditText>
 
@@ -83,6 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
+            android:background="@drawable/stilobuton"
             >
         </EditText>
 
@@ -103,11 +106,21 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            android:background="@drawable/stilobuton"
             >
 
         </EditText>
 
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_terms_and_conditions"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
         <Button
+            android:id="@+id/registerFinish"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/txt_register"

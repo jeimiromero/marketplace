@@ -42,10 +42,13 @@
         </TextView>
 
         <EditText
+            android:id="@+id/edt_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:hint="email@domain.com"
+            android:padding="10dp"
+            android:background="@drawable/stilobuton"
             >
 
         </EditText>
@@ -61,15 +64,19 @@
         </TextView>
 
         <EditText
+            android:id="@+id/edt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:hint="********"
+            android:background="@drawable/stilobuton"
+            android:padding="10dp"
             >
 
         </EditText>
 
         <Button
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/txt_login"
@@ -80,6 +87,7 @@
         </Button>
 
         <Button
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/txt_register"
