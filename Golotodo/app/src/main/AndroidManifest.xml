@@ -10,12 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Golotodo">
         <activity
+            android:name=".DrawerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/Theme.Golotodo.NoActionBar" />
+        <activity
             android:name=".Register"
             android:exported="false" />
         <activity
             android:name=".LOGIN"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
