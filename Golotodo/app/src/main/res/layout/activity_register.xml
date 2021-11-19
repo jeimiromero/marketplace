@@ -9,15 +9,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.5"
+        android:layout_height="36dp"
+        android:layout_weight="1.2"
         android:orientation="horizontal">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/golotodo_2"
-            android:layout_margin="40dp">
+            android:layout_margin="20dp"
+            android:src="@drawable/golotodo_2">
 
         </ImageView>
 
@@ -25,112 +25,130 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="3"
-        android:layout_margin="15dp">
-        <TextView
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_name"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:textSize="25dp"
-            android:textColor="@color/black"
-            android:layout_margin="5dp">
-        </TextView>
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
 
-        <EditText
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/txt_name"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/stilobuton">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/txt_lastname"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/stilobuton">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/txt_email"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/stilobuton">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/txt_password"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/stilobuton">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/stilobuton"
-            >
-        </EditText>
+            android:layout_height="0dp"
+            android:layout_margin="17dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_lastname"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:layout_weight="1"
-            android:textColor="@color/black"
-            android:layout_margin="5dp">
-        </TextView>
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/txt_terms_and_conditions"
+                android:textSize="18dp" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/stilobuton"
-            >
-        </EditText>
+            <Button
+                android:id="@+id/registerFinish"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/stilobuton"
+                android:text="@string/txt_register"
+                android:textSize="18dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_email"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:layout_weight="1"
-            android:textColor="@color/black"
-            android:layout_margin="5dp">
-        </TextView>
+            </Button>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/stilobuton"
-            >
-        </EditText>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_password"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:layout_weight="1"
-            android:textColor="@color/black"
-            android:layout_margin="10dp">
-
-        </TextView>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/stilobuton"
-            >
-
-        </EditText>
-
-        <CheckBox
-            android:id="@+id/checkbox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_terms_and_conditions"
-            android:textSize="20sp"
-            android:gravity="center"/>
-
-        <Button
-            android:id="@+id/registerFinish"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_register"
-            android:textSize="20dp"
-            android:layout_weight="1"
-            android:background="@drawable/stilobuton"
-            android:layout_margin="5dp">
-        </Button>
-
+        </LinearLayout>
     </LinearLayout>
-
 
 </LinearLayout>
