@@ -23,8 +23,29 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="txt_term">to accept</string>
+
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string name="title_terms_and_conditions"> Terms and Conditions </string>
+    <string name="text_paragraph_1"> Read the following terms and conditions carefully before placing orders in the Golotodo virtual store.</string>
+
+    <string name="subtítulo_uno">1. Generalities </string>
+
+    <string name="text_paragraph_one"> By making use of the services of this website, as well as when making purchases the GOLOTODO app, you imply acceptance of the terms and conditions present here. Registering as a user in the shopping portal in the GOLOTODO APP implies that your data will be part of the GOLOTODO customer database, and the treatment of these data will be carried out in accordance with the Privacy Policy, which the User agrees when creating an account as a customer.</string>
+    <string name="text_paragraph_two"> GOLOTODO reserves the right to modify, without prior notice, the presentation and configuration of this application, as well as the items established in this document. Users may access the information contained in this document at any time through the link "Terms and Conditions". </string>
+    <string name="text_paragraph_three">All visits and transactions carried out in this app will be governed and governed by the current laws of the Republic of Colombia. Either way, the acceptance of these terms and conditions will be an essential requirement to make purchases through this APP. </string>
+    <string name="text_paragraph_four"> ANY USER WHO DOES NOT ACCEPT THESE TERMS AND CONDITIONS SHOULD AVOID USING THIS APPLICATION.</string>
+    <string name="subtitle_two">2. Capacity </string>
+    <string name="text_paragraph_five"> The services offered in this application are aimed at people who have the legal capacity to enter into a contract.</string>
+    <string name="text_paragraph_six"> By clicking the "I accept the terms and conditions" button or the "Register" button when creating a new account, the user accepts and confirms that they are over 18 years of age and also that all the data provided to GOLOTODO are true. In any case, the user will be responsible for any false or suspicious statement that may cause damage and / or harm to GOLOTODO or to third parties involved in the provision of services by GOLOTODO.</string>
+    <string name="text_paragraph_seven"> It is mandatory to complete the required information in all fields of the registration and purchase forms in an exact, precise and truthful manner, while assuming the commitment to keep this information updated.  </string>
+    <string name="subtitle_three">3. Purchase System </string>
+    <string name="text_paragraph_eight"> Once the user registration has been completed, the user will be provided with a unique username and password that will allow access to the secure and confidential platform. The user will be responsible for maintaining the confidentiality of their access credentials to this website, which allow them to obtain information and make purchases through this application. These credentials are for personal use and their delivery to third parties does NOT involve GOLOTODO as responsible in case of misuse of them. </string>
+    <string name="text_paragraph_nine"> All purchases made through this application will be subject to identity verification, which can take up to 3 business days; verification carried out for the safety of both the client and GOLOTODO.</string>
+
+
 </resources>
