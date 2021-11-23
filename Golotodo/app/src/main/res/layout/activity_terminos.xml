@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TerminosActivity"
     android:layout_margin="20dp"
     android:orientation="vertical">
     <androidx.cardview.widget.CardView
@@ -36,7 +35,7 @@
                     android:gravity="center"
                     android:text="@string/title_terms_and_conditions"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/title"
+
                     android:textSize="26dp">
 
                 </TextView>
@@ -156,8 +155,7 @@
                 android:id="@+id/btn_registro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_term"
-                android:onClick="@">
+                android:text="@string/txt_term">
             </Button>
 
            </LinearLayout>

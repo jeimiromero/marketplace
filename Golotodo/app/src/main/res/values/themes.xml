@@ -22,6 +22,4 @@
     <style name="Theme.Golotodo.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Golotodo.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-    <color name="title">#ffffff</color>
 </resources>

@@ -8,9 +8,10 @@
     tools:context=".Register">
 
     <LinearLayout
+
         android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_weight="1.2"
+        android:layout_height="3dp"
+        android:layout_weight="10"
         android:orientation="horizontal">
 
         <ImageView
@@ -29,12 +30,6 @@
         android:layout_margin="15dp"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="15dp"
-            android:layout_weight="4"
-            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -49,8 +44,9 @@
             </TextView>
 
             <EditText
+                android:id="@+id/edt_name"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="48dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/stilobuton">
@@ -70,6 +66,7 @@
             </TextView>
 
             <EditText
+                android:id="@+id/edt_lastname"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:layout_margin="5dp"
@@ -91,6 +88,7 @@
             </TextView>
 
             <EditText
+                android:id="@+id/edt_email"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:layout_margin="5dp"
@@ -112,6 +110,7 @@
             </TextView>
 
             <EditText
+                android:id="@+id/edt_password"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:layout_margin="10dp"
@@ -119,36 +118,43 @@
                 android:background="@drawable/stilobuton">
 
             </EditText>
-        </LinearLayout>
+
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="17dp"
-            android:layout_weight="1.5"
-            android:orientation="vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/checkbox"
+                android:id="@+id/chb_terminos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/txt_terms_and_conditions"
+                android:gravity="center_horizontal"
                 android:textSize="18dp" />
 
+            <TextView
+                android:id="@+id/tev_terminos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_800"
+                android:text="@string/txt_terms_and_conditions"
+                android:clickable="true">
+
+            </TextView>
+        </LinearLayout>
             <Button
                 android:id="@+id/registerFinish"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="40dp"
                 android:layout_margin="10dp"
-                android:layout_weight="0.3"
                 android:background="@drawable/stilobuton"
                 android:text="@string/txt_register"
-                android:textSize="18dp">
+                android:textSize="18dp"
+                android:enabled="false">
 
             </Button>
 
-        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
