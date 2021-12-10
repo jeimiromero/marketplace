@@ -48,4 +48,13 @@
     <string name="text_paragraph_nine"> All purchases made through this application will be subject to identity verification, which can take up to 3 business days; verification carried out for the safety of both the client and GOLOTODO.</string>
 
 
+    <string-array name="categoria">
+        <item>futbol</item>
+        <item>balonseto</item>
+        <item>tennis</item>
+        <item>natacion</item>
+        <item>golf</item>
+    </string-array>
 </resources>
+
+
