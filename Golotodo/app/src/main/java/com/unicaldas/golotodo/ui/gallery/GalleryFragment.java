@@ -21,6 +21,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.unicaldas.golotodo.R;
 
@@ -36,7 +38,7 @@ public class GalleryFragment<db> extends Fragment {
     private RecyclerView rev_productos;
     private RecyclerView.Adapter mAdapter;
 
-    String jsonProductos = "[{\"nombre\":\"Balón\",\"categoria\":\"Futbol\",\"precio\":50000,\"enstock\":true,\"imagen\":\"https://http2.mlstatic.com/D_NQ_NP_815916-MCO40929202779_022020-V.jpg\",\"sucursales\":[{\"nombre\":\"Sucursal A\",\"area\":100,\"encargado\":{\"nombre\":\"Encargado 1\"}},{\"nombre\":\"Sucursal B\",\"area\":200,\"encargado\":{\"nombre\":\"Encargado 2\"}}]},{\"nombre\":\"Guantes\",\"categoria\":\"Carreras\",\"precio\":40000,\"enstock\":false,\"imagen\":\"https://http2.mlstatic.com/D_NQ_NP_700137-MCO45115756330_032021-O.jpg\",\"sucursales\":[{\"nombre\":\"Sucursal C\",\"area\":50,\"encargado\":{\"nombre\":\"Encargado 3\"}},{\"nombre\":\"Sucursal D\",\"area\":45,\"encargado\":{\"nombre\":\"Encargado 4\"}}]},{\"nombre\":\"Raqueta\",\"categoria\":\"Carreras\",\"precio\":40000,\"enstock\":false,\"imagen\":\"https://s3.amazonaws.com/mercado-ideas/wp-content/uploads/sites/2/2019/10/22100017/raqueta-prince.jpg\",\"sucursales\":[{\"nombre\":\"Sucursal C\",\"area\":50,\"encargado\":{\"nombre\":\"Encargado 3\"}},{\"nombre\":\"Sucursal D\",\"area\":45,\"encargado\":{\"nombre\":\"Encargado 4\"}}]},{\"nombre\":\"Pimpones\",\"categoria\":\"Carreras\",\"precio\":40000,\"enstock\":false,\"imagen\":\"https://http2.mlstatic.com/D_NQ_NP_705376-MCO44976750617_022021-O.jpg\",\"sucursales\":[{\"nombre\":\"Sucursal C\",\"area\":50,\"encargado\":{\"nombre\":\"Encargado 3\"}},{\"nombre\":\"Sucursal D\",\"area\":45,\"encargado\":{\"nombre\":\"Encargado 4\"}}]},{\"nombre\":\"Guayos\",\"categoria\":\"Carreras\",\"precio\":40000,\"enstock\":false,\"imagen\":\"https://http2.mlstatic.com/D_NQ_NP_818984-MCO44044382745_112020-O.jpg\",\"sucursales\":[{\"nombre\":\"Sucursal C\",\"area\":50,\"encargado\":{\"nombre\":\"Encargado 3\"}},{\"nombre\":\"Sucursal D\",\"area\":45,\"encargado\":{\"nombre\":\"Encargado 4\"}}]},{\"nombre\":\"Pito\",\"categoria\":\"Carreras\",\"precio\":40000,\"enstock\":false,\"imagen\":\"https://http2.mlstatic.com/D_NQ_NP_606072-MCO31107180678_062019-V.jpg\",\"sucursales\":[{\"nombre\":\"Sucursal C\",\"area\":50,\"encargado\":{\"nombre\":\"Encargado 3\"}},{\"nombre\":\"Sucursal D\",\"area\":45,\"encargado\":{\"nombre\":\"Encargado 4\"}}]},{\"nombre\":\"Canilleras\",\"categoria\":\"Carreras\",\"precio\":40000,\"enstock\":false,\"imagen\":\"https://http2.mlstatic.com/D_NQ_NP_841158-MCO44011563751_112020-V.jpg\",\"sucursales\":[{\"nombre\":\"Sucursal C\",\"area\":50,\"encargado\":{\"nombre\":\"Encargado 3\"}},{\"nombre\":\"Sucursal D\",\"area\":45,\"encargado\":{\"nombre\":\"Encargado 4\"}}]}]";
+    String jsonProductos = "[{\"nombre\":\"Bandeja Paisa\",\"categoria\":\"plato fuerte\",\"precio\":35000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2017/10/platos-tipicos-de-Colombia-bandeja-paisa-min-630x420.jpg\"},{\"nombre\":\"Sancocho Antioqueño\",\"categoria\":\"plato fuerte\",\"precio\":25000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2017/10/sancocho-colombiano-foto-min-630x420.jpg\"},{\"nombre\":\"Cocido Boyacense\",\"categoria\":\"plato fuerte\",\"precio\":30000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2020/02/686px-Cocido_boyaco-1-561x420.jpg\"},{\"nombre\":\"Fritanga Bogotana\",\"categoria\":\"plato fuerte\",\"precio\":20000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2017/10/Fritanga-bogotana-colombiana-min-696x392.jpg\"},{\"nombre\":\"Viudo de Bocachico o Capaz\",\"categoria\":\"plato fuerte\",\"precio\":45000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/bocachico-1.jpg\"},{\"nombre\":\"Carne Oreada\",\"categoria\":\"plato fuerte\",\"precio\":30000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/crte-oreada-1-630x420.jpg\"},{\"nombre\":\"Chanfaina\",\"categoria\":\"plato fuerte\",\"precio\":20000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/cafaina-1-629x420.jpg\"},{\"nombre\":\"Carne puyada\",\"categoria\":\"plato fuerte\",\"precio\":30000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/carne-puyada-1-560x420.jpg\"},{\"nombre\":\"Arroz Apastelado\",\"categoria\":\"plato fuerte\",\"precio\":30000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/arroz-empastelado-1-629x420.jpg\"},{\"nombre\":\"Butifarra Soledeña\",\"categoria\":\"plato fuerte\",\"precio\":25000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/butifarras-saldena-1.jpg\"},{\"nombre\":\"Cuy\",\"categoria\":\"plato fuerte\",\"precio\":20000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/Conejillo-de-Indias-1-630x420.jpg\"},{\"nombre\":\"Locro\",\"categoria\":\"plato fuerte\",\"precio\":20000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/Locro-1-630x420.jpg\"},{\"nombre\":\"Arroz Atollado\",\"categoria\":\"plato fuerte\",\"precio\":30000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/Arroz-atollado-1-630x420.jpg\"},{\"nombre\":\"Ternera a La Llanera o Mamona\",\"categoria\":\"plato fuerte\",\"precio\":25000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/carne-tarnera-1-629x420.jpg\"},{\"nombre\":\"Tungos de Arroz\",\"categoria\":\"plato fuerte\",\"precio\":15000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/Tungos-de-arroz-1-631x420.jpg\"},{\"nombre\":\"Cachama en Salsa o “Sudada”\",\"categoria\":\"plato fuerte\",\"precio\":25000,\"enstock\":true,\"imagen\":\"https://www.lifeder.com/wp-content/uploads/2021/01/Cachama-en-salsa-o-sudada-1-613x420.jpg\"}]";
     String jsonProducto = "{\"nombre\":\"Balón\",\"precio\":50000,\"enstock\":true}";
 
     String[] categorias = new String[]{"Futbol", "Baloncesto", "Golf", "Natación", "Carreras"};
@@ -145,7 +147,7 @@ public class GalleryFragment<db> extends Fragment {
     }
 }
 
-class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.ViewHolder> {
+    class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.ViewHolder> {
 
     private JSONArray productos;
 
@@ -171,48 +173,48 @@ class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.ViewHolder>
 
             Log.e("POS_rec", "POS: " + position);
             String nombre = productos.getJSONObject(position).getString("nombre");
-            //String categoria = productos.getJSONObject(position).getString("categoria");
-            //String precio = productos.getJSONObject(position).getString("precio");
-           // String imagen = productos.getJSONObject(position).getString("imagen");
+            String categoria = productos.getJSONObject(position).getString("categoria");
+            String precio = productos.getJSONObject(position).getString("precio");
+            String imagen = productos.getJSONObject(position).getString("imagen");
 
             holder.tev_nombre_producto.setText(nombre);
-           // holder.tev_categoria_producto.setText("Categoria: " + categoria);
-           // holder.tev_precio_producto.setText("$" + precio);
+            holder.tev_categoria_producto.setText("Categoria: " + categoria);
+            holder.tev_precio_producto.setText("$" + precio);
 
             if (position % 2 == 0) {
                 //holder.ll_item.setBackground(miActividad.getDrawable(R.drawable.item_fondo_1));
             } else {
-               // holder.ll_item.setBackground(miActividad.getDrawable(R.drawable.item_fondo_2));
+                //holder.ll_item.setBackground(miActividad.getDrawable(R.drawable.item_fondo_2));
             }
 
 
 
-           // holder.btn_favorito.setOnClickListener(new View.OnClickListener() {
-              //  @Override
-             //   public void onClick(View v) {
-               //     Toast.makeText(miActividad, "Nombre: " + nombre, Toast.LENGTH_SHORT).show();
-             //   }
-           // });
+            holder.btn_favorito.setOnClickListener(new View.OnClickListener() {
+              @Override
+                public void onClick(View v) {
+                    Toast.makeText(miActividad, "Nombre: " + nombre, Toast.LENGTH_SHORT).show();
+                }
+            });
 
 
 
-            //Glide.with(miActividad).load(imagen)
-            //        .diskCacheStrategy(DiskCacheStrategy.ALL)
-            //        .into(holder.imv_prodcuto);
+            Glide.with(miActividad).load(imagen)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .into(holder.imv_prodcuto);
 
-           // holder.imv_prodcuto.setOnClickListener(new View.OnClickListener() {
-             //   @Override
-            //    public void onClick(View v) {
-            //        try {
-            //            Log.e("CLICK_IMGANE", productos.getJSONObject(position).toString());
-             //           Intent intent = new Intent(miActividad, DetalleProductoActivity.class);
-             //           intent.putExtra("producto", productos.getJSONObject(position).toString());
-            //            miActividad.startActivity(intent);
-             //       } catch (JSONException e) {
-             //           e.printStackTrace();
-             //       }
-             //   }
-          //  });
+            holder.imv_prodcuto.setOnClickListener(new View.OnClickListener() {
+               @Override
+                public void onClick(View v) {
+                   // try {
+                   //     Log.e("CLICK_IMGANE", productos.getJSONObject(position).toString());
+                  //      Intent intent = new Intent(miActividad, DetalleProductoActivity.class);
+                    //    intent.putExtra("producto", productos.getJSONObject(position).toString());
+                  //      miActividad.startActivity(intent);
+                  //  } catch (JSONException e) {
+                  //      e.printStackTrace();
+                   // }
+                }
+            });
 
 
 
@@ -230,23 +232,23 @@ class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.ViewHolder>
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView tev_nombre_producto;
-       // private TextView tev_categoria_producto;
-       // private TextView tev_precio_producto;
-       // private Button btn_favorito;
-       // private Button btn_carrito;
-       // private ImageView imv_prodcuto;
-       // private LinearLayout ll_item;
+        private TextView tev_categoria_producto;
+        private TextView tev_precio_producto;
+        private Button btn_favorito;
+        private Button btn_carrito;
+        private ImageView imv_prodcuto;
+        private LinearLayout ll_item;
 
 
         public ViewHolder(View v) {
             super(v);
             tev_nombre_producto = v.findViewById(R.id.tev_nombre_producto);
-           // tev_categoria_producto = v.findViewById(R.id.tev_categoria_producto);
-           // tev_precio_producto = v.findViewById(R.id.tev_precio_producto);
-           // btn_favorito = v.findViewById(R.id.btn_favorito);
-           // btn_carrito = v.findViewById(R.id.btn_carrito);
-           // imv_prodcuto = v.findViewById(R.id.imv_producto);
-           // ll_item = v.findViewById(R.id.ll_item);
+            tev_categoria_producto = v.findViewById(R.id.tev_categoria_producto);
+            tev_precio_producto = v.findViewById(R.id.tev_precio_producto);
+            btn_favorito = v.findViewById(R.id.btn_favorito);
+            btn_carrito = v.findViewById(R.id.btn_carrito);
+            imv_prodcuto = v.findViewById(R.id.imv_producto);
+            ll_item = v.findViewById(R.id.ll_item);
 
         }
     }
